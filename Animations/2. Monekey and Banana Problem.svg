@@ -1,0 +1,93 @@
+<svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img" xmlns:c2pa="http://c2pa.org/manifest">
+<title>Monkey and Banana problem animation</title>
+<desc>An animated scene where a monkey walks from the door to a box, drags the box under a hanging banana, jumps up onto the box, then jumps a second time to grasp the banana, looping continuously.</desc>
+<style>
+@keyframes monkeyMove {
+  0%    { transform: translate(0px,0px); }
+  6%    { transform: translate(0px,0px); }
+  22%   { transform: translate(425px,0px); }
+  30%   { transform: translate(425px,0px); }
+  46%   { transform: translate(205px,0px); }
+  58%   { transform: translate(205px,0px); }
+  62%   { transform: translate(228px,-30px); }
+  66%   { transform: translate(250px,-40px); }
+  72%   { transform: translate(250px,-40px); }
+  76%   { transform: translate(250px,-49px); }
+  80%   { transform: translate(250px,-58px); }
+  83%   { transform: translate(250px,-64px); }
+  86%   { transform: translate(250px,-68px); }
+  88.5% { transform: translate(250px,-80px); }
+  93%   { transform: translate(250px,-52px); }
+  100%  { transform: translate(0px,0px); }
+}
+@keyframes boxMove {
+  0%   { transform: translate(0px,0px); }
+  30%  { transform: translate(0px,0px); }
+  46%  { transform: translate(-220px,0px); }
+  100% { transform: translate(-220px,0px); }
+}
+@keyframes bananaFade {
+  0%    { opacity: 1; }
+  85%   { opacity: 1; }
+  88.5% { opacity: 0; }
+  99%   { opacity: 0; }
+  100%  { opacity: 1; }
+}
+@keyframes sparkle {
+  0%, 83% { opacity: 0; }
+  88.5%   { opacity: 1; }
+  96%     { opacity: 1; }
+  99%     { opacity: 0; }
+  100%    { opacity: 0; }
+}
+.monkey-anim { animation: monkeyMove 14s linear infinite; }
+.box-anim    { animation: boxMove 14s linear infinite; }
+.banana-anim { animation: bananaFade 14s linear infinite; }
+.sparkle-anim{ animation: sparkle 14s linear infinite; }
+</style>
+
+<rect x="0" y="0" width="680" height="400" fill="#f4e8d0"/>
+<rect x="0" y="340" width="680" height="60" fill="#c9915a"/>
+<rect x="0" y="340" width="680" height="4" fill="#9a6a38"/>
+
+<rect x="40" y="200" width="60" height="140" fill="#8b5a2e" rx="3"/>
+<circle cx="88" cy="270" r="3" fill="#f4e8d0"/>
+
+<rect x="555" y="150" width="90" height="90" fill="#cfe8ff" stroke="#9a6a38" stroke-width="4" rx="2"/>
+<line x1="600" y1="150" x2="600" y2="240" stroke="#9a6a38" stroke-width="3"/>
+<line x1="555" y1="195" x2="645" y2="195" stroke="#9a6a38" stroke-width="3"/>
+
+<line x1="333" y1="40" x2="333" y2="149" stroke="#8a8a8a" stroke-width="2"/>
+
+<g class="box-anim">
+  <rect x="530" y="300" width="60" height="40" fill="#b5651d" rx="2"/>
+  <line x1="530" y1="300" x2="590" y2="340" stroke="#8a4a15" stroke-width="2"/>
+  <line x1="590" y1="300" x2="530" y2="340" stroke="#8a4a15" stroke-width="2"/>
+</g>
+
+<g class="banana-anim">
+  <ellipse cx="333" cy="148" rx="2.5" ry="3.5" fill="#6b4a1f"/>
+  <path d="M333,150 C327,158 324,172 324,188 C324,200 328,209 334,207 C340,205 343,193 342,179 C341,167 338,156 333,150 Z" fill="#f6d84a" stroke="#d9a91f" stroke-width="1"/>
+  <path d="M328,160 C325,174 324,190 329,202" fill="none" stroke="#d9a91f" stroke-width="0.8" opacity="0.8"/>
+  <path d="M336,158 C339,171 339,187 335,201" fill="none" stroke="#d9a91f" stroke-width="0.8" opacity="0.8"/>
+  <ellipse cx="335" cy="206" rx="2.5" ry="3.5" fill="#6b4a1f"/>
+</g>
+
+<g class="sparkle-anim">
+  <path d="M250 238 L254 248 L264 252 L254 256 L250 266 L246 256 L236 252 L246 248 Z" fill="#ffd23f"/>
+</g>
+
+<g class="monkey-anim">
+  <g transform="translate(90,340)">
+    <ellipse cx="-8" cy="-8" rx="5" ry="8" fill="#8a5a2e"/>
+    <ellipse cx="8" cy="-8" rx="5" ry="8" fill="#8a5a2e"/>
+    <ellipse cx="-16" cy="-28" rx="7" ry="11" fill="#a06a3a" transform="rotate(20 -16 -28)"/>
+    <ellipse cx="0" cy="-32" rx="14" ry="18" fill="#8a5a2e"/>
+    <circle cx="10" cy="-53" r="11" fill="#c98a4b"/>
+    <ellipse cx="17" cy="-60" rx="5" ry="4" fill="#8a5a2e"/>
+    <circle cx="14" cy="-55" r="1.6" fill="#3a2313"/>
+    <ellipse cx="-8" cy="-8" rx="5" ry="9" fill="#8a5a2e"/>
+    <ellipse cx="8" cy="-8" rx="5" ry="9" fill="#8a5a2e"/>
+  </g>
+</g>
+</svg>
